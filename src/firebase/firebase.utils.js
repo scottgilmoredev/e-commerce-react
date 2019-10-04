@@ -14,6 +14,44 @@ const config = {
     measurementId: "G-W7KPNN5L2J"
 }
 
+/**
+ * Create a db record when a new user signs in.
+ * @param {Object} userAuth - Google auth user data.
+ * @param {Object} additionalData - any additional data we may receive.
+ */
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) return;
+
+    // Retrieve DocumentReference for the current user.
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+    /**
+     * Once we get the DocumentReference, we can get the DocumentSnapshot and
+     * determine whether or not a record exists.
+     */
+    const snapShot = await userRef.get();
+
+    // If no record exists, create one.
+    if (!snapShot.exists) {
+        const { displayName, email } = userAuth;
+        const createdAt = new Date();
+
+        // Create record with displayName, email, createdAt, and additional data.
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                createdAt,
+                ...additionalData
+            });
+        } catch (error) {
+            console.log('Error creating user', error.message);
+        }
+    }
+
+    return userRef;
+};
+
 // Initialize firebase with this project's config.
 firebase.initializeApp(config);
 
