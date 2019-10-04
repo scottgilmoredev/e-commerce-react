@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import './directory.styles.scss';
 
 // Components
 import MenuItem from '../menu-item/menu-item.component';
+
+// Styles
+import './directory.styles.scss';
 
 /**
  * Display the store menu items.
