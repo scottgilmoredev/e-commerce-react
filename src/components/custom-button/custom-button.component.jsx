@@ -6,7 +6,7 @@ import './custom-button.styles.scss';
 /**
  * Display a custom button.
  * @param {String} children - button title.
- * @param {Object} otherProps - type.
+ * @param {Object} otherProps - onClick, type.
  */
 const CustomButton = ({ children, ...otherProps }) => (
     <button className='custom-button' {...otherProps}>
