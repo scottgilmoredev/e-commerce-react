@@ -13,6 +13,7 @@ import './checkout.styles.scss';
 
 const CheckoutPage = ({ cartItems, total }) => (
     <div className='checkout-page'>
+        { /* Cart items list header */ }
         <div className='checkout-header'>
             <div className='header-block'>
                 <span>Product</span>
@@ -31,10 +32,12 @@ const CheckoutPage = ({ cartItems, total }) => (
             </div>
         </div>
 
+        { /* Cart items */ }
         {
             cartItems.map(cartItem => <CheckoutItem key={ cartItem.id } cartItem={ cartItem } />)
         }
 
+        { /* Total */ }
         <div className='total'>
             <span>TOTAL: ${ total }</span>
         </div>
