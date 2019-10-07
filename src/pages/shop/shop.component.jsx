@@ -7,6 +7,7 @@ import CollectionsOverview from '../../components/collections-overview/collectio
 
 /**
  * Display the shop page.
+ * This component renders the CollectionOverview and CollectionPage components.
  */
 const ShopPage = ({ match }) => (
     <div className='shop-page'>

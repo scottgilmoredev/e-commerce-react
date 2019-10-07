@@ -11,6 +11,11 @@ import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
 // Styles
 import './collections-overview.component';
 
+/**
+ * Display collections overview.
+ * This component maps the collections and renders them with CollectionPreview component.
+ * @param {Array} collections - list of collections.
+ */
 const CollectionsOverview = ({ collections }) => (
     <div className='collections-overview'>
         {
