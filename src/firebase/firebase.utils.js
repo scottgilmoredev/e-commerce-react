@@ -15,6 +15,51 @@ const config = {
 }
 
 /**
+ * Add records to firestore.
+ * 
+ * NOTE: This is for reference only. This call in App.js componentDidMount
+ * is commented out to avoid adding records with each instantiation.
+ * @param {String} collectionKey - collection name to be used as db key.
+ * @param {Array} data - list of collections to add to firestore.
+ */
+export const addCollectionAndDocuments = async (collectionKey, data) => {
+    const collectionRef = firestore.collection(collectionKey);
+    const batch = firestore.batch();
+
+    // Batch collection items. This ensures no records are added if an error occurs.
+    data.forEach(object => {
+        const newDocRef = collectionRef.doc();
+        batch.set(newDocRef, object);
+    });
+
+    return await batch.commit();
+};
+
+/**
+ * Transform and normalize collection data, adding collection id and routeName.
+ * @param {Object} collectionsSnapshot - firestore DocumentSnapshot.
+ */
+export const convertCollectionsSnapshotToMap = collectionsSnapshot => {
+    const transformedCollection =collectionsSnapshot.docs.map(docSnapshot => {
+        const { items, title } = docSnapshot.data();
+
+        return {
+            id: docSnapshot.id,
+            items,
+            routeName: encodeURI(title.toLowerCase()),
+            title,
+        };
+    });
+
+    // Normalize collection data.
+    return transformedCollection.reduce((accumulator, collection) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+
+        return accumulator;
+    }, {});
+};
+
+/**
  * Create a db record when a new user signs in.
  * @param {Object} userAuth - Google auth user data.
  * @param {Object} additionalData - any additional data we may receive.
