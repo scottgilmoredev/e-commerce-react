@@ -18,7 +18,6 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 
 // Styles
 import './App.css';
-import './pages/homepage/homepage.styles.scss';
 
 // Actions
 import { setCurrentUser } from './redux/user/user.actions';
