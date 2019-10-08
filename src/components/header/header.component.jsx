@@ -18,37 +18,42 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 // Styles
-import './header.styles.scss';
+import {
+    HeaderContainer,
+    LogoContainer,
+    OptionsContainer,
+    OptionDiv,
+} from './header.styles';
 
 /**
  * Display the app header.
  */
 const Header = ({ currentUser, hidden }) => (
-    <div className='header'>
+    <HeaderContainer>
         { /* Logo */ }
-        <Link className='logo-container' to='/'>
+        <LogoContainer to='/'>
             <Logo className='logo' />
-        </Link>
+        </LogoContainer>
 
         { /* Nav Links: Shop, Contact, Sign Out, and Cart Icon */ }
-        <div className='options'>
-            <Link className='option' to='/shop'>SHOP</Link>
-            <Link className='option' to='/contact'>CONTACT</Link>
+        <OptionsContainer>
+            <OptionDiv as={ Link } to='/shop'>SHOP</OptionDiv>
+            <OptionDiv as={ Link } to='/contact'>CONTACT</OptionDiv>
 
             { /* Sign Out */ }
             {
                 currentUser
-                    ? <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-                    : <Link className='option' to='/signin'>SIGN IN</Link>
+                    ? <OptionDiv onClick={() => auth.signOut()}>SIGN OUT</OptionDiv>
+                    : <OptionDiv as={ Link } to='/signin'>SIGN IN</OptionDiv>
             }
     
             { /* Cart Icon */ }
             <CartIcon />
-        </div>
+        </OptionsContainer>
 
         { /* Cart dropdown */ }
         { hidden ? null : <CartDropDown /> }
-    </div>
+    </HeaderContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

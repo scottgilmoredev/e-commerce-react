@@ -3,13 +3,16 @@ import React from 'react';
 // Components
 import Directory from '../../components/directory/directory.component';
 
+// Styles
+import { HomePageContainer } from './homepage.styles';
+
 /**
  * Display the store home page.
  */
 const HomePage = () => (
-    <div className='homepage'>
+    <HomePageContainer>
         <Directory />
-    </div>
+    </HomePageContainer>
 );
 
 export default HomePage;
