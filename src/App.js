@@ -16,6 +16,9 @@ import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 // Redux selectors
 import { selectCurrentUser } from './redux/user/user.selectors';
 
+// Uncomment the line below to add more collections redcords to firestore.
+// import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
+
 // Styles
 import './App.css';
 
@@ -43,6 +46,18 @@ class App extends Component {
 
       // If userAuth is null (user logged out), ensure the current user value is null.
       setCurrentUser(userAuth);
+
+      /**
+       * Add each of our collections to firestore, destructuring off the items and title fields.
+       * 
+       * NOTE: collections will need to be destructured off props,
+       * and addCollectionAndDocuments will need to be imported 
+       * in order to do this.
+       */
+      // addCollectionAndDocuments(
+      //   'collections',
+      //   collections.map(({ items, title }) => ({ items, title }))
+      // );
     });
   };
 
@@ -73,6 +88,9 @@ class App extends Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
+
+  // Uncomment the line below to add more collections redcords to firestore.
+  // collections: selectCollectionsForPreview,
 });
 
 const mapDispatchToProps = dispatch => ({
