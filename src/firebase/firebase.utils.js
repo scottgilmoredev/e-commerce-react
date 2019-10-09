@@ -17,8 +17,8 @@ const config = {
 /**
  * Add records to firestore.
  * 
- * NOTE: This is for reference only. This call in App.js componentDidMount
- * is commented out to avoid adding records with each instantiation.
+ * NOTE: This is for reference only. This is invoked in App.js componentDidMount,
+ * but is commented out to avoid adding records with each instantiation.
  * @param {String} collectionKey - collection name to be used as db key.
  * @param {Array} data - list of collections to add to firestore.
  */
@@ -97,6 +97,18 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     return userRef;
 };
 
+/**
+ * Get current user from firebase auth.
+ */
+export const getCurrentUser = () => {
+    return new Promise((resolve, reject) => {
+        const unsubscribe = auth.onAuthStateChanged(userAuth => {
+            unsubscribe();
+            resolve(userAuth);
+        }, reject);
+    });
+};
+
 // Initialize firebase with this project's config.
 firebase.initializeApp(config);
 
@@ -106,10 +118,10 @@ export const firestore = firebase.firestore();
 /**
  * Google authentication utility.
  */
-const provider = new firebase.auth.GoogleAuthProvider();
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 // Trigger Google pop-up.
-provider.setCustomParameters({ prompt: 'select_account' });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
