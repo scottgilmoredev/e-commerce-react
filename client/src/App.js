@@ -18,7 +18,7 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 // import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
 
 // Styles
-import './App.css';
+import { GlobalStyle } from './global.styles';
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -39,6 +39,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path='/' component={ HomePage } />

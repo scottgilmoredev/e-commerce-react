@@ -17,19 +17,19 @@ import {
  * @param {String} title - collection title.
  */
 const CollectionPreview = ({ items, title, history, match, routeName }) => (
-    <CollectionPreviewContainer className='collection-preview'>
+    <CollectionPreviewContainer>
         { /* Title */ }
-        <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
+        <TitleContainer onClick={() => history.push(`${ match.path }/${ routeName }`)}>
             {title.toUpperCase()}
         </TitleContainer>
 
         { /* Collection items */ }
-        <PreviewContainer className='preview'>
+        <PreviewContainer>
             {
                 items
                     .filter((item, index) => index < 4)
                     .map((item) => (
-                        <CollectionItem key={item.id} item={item} />
+                        <CollectionItem key={ item.id } item={ item } />
                     ))
             }
         </PreviewContainer>

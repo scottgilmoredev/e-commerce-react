@@ -30,7 +30,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     <HeaderContainer>
         { /* Logo */ }
         <LogoContainer to='/'>
-            <Logo className='logo' />
+            <Logo />
         </LogoContainer>
 
         { /* Nav Links: Shop, Contact, Sign Out, and Cart Icon */ }

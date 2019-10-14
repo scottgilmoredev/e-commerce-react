@@ -8,7 +8,11 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import { selectCollection } from '../../redux/shop/shop.selectors';
 
 // Styles
-import './collection.styles.scss';
+import {
+    CollectionPageContainer,
+    CollectionItemsContainer,
+    CollectionTitle,
+  } from './collection.styles';
 
 /**
  * Display the collection page.
@@ -20,17 +24,17 @@ const CollectionPage = ({ collection }) => {
     const { title, items } = collection;
 
     return (
-        <div className='collection-page'>
+        <CollectionPageContainer>
             { /* Title */ }
-            <h2 className='title'>{ title }</h2>
+            <CollectionTitle>{ title }</CollectionTitle>
 
             { /* Items */ }
-            <div className='items'>
+            <CollectionItemsContainer>
                 {
                     items.map(item => <CollectionItem key={ item.id } item={ item } />)
                 }
-            </div>
-        </div>
+            </CollectionItemsContainer>
+        </CollectionPageContainer>
     )
 };
 
