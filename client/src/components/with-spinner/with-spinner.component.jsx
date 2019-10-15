@@ -1,7 +1,7 @@
 import React from 'react';
 
-// Styles
-import { SpinnerContainer, SpinnerOverlay } from './with-spinner.styles';
+// Components
+import Spinner from '../spinner/spinner.component';
 
 /**
  * HOC to display a spinner while data is loading.
@@ -9,11 +9,7 @@ import { SpinnerContainer, SpinnerOverlay } from './with-spinner.styles';
  */
 const WithSpinner = WrappedComponent => ({ isLoading, ...otherProps }) => {
     return isLoading
-        ? (
-            <SpinnerOverlay>
-                <SpinnerContainer />
-            </SpinnerOverlay>
-        )
+        ? <Spinner />
         : <WrappedComponent { ...otherProps } />
 };
 
