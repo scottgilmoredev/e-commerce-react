@@ -1,12 +1,12 @@
 # Harry's Hoods Ltd.
 
-This project is a complete e-commerce web app built to learn the React JavaScript library.
-
 Come on in! Shop till you drop. Sign up, sign in with Google, checkout. Do it all! You can feel good about Harry's Hoods.
+
+This project is a complete e-commerce web app built to learn the React JavaScript library.
 
 ## Technologies used
 
-In addition to [React](https://reactjs.org/), this project uses:
+In addition to [React](https://reactjs.org/), I learned / utilized:
 
 1. [React Router](https://github.com/ReactTraining/react-router) for routing.
 2. [Redux](https://redux.js.org/) for state management.
@@ -22,7 +22,9 @@ In addition to [React](https://reactjs.org/), this project uses:
 
 ## Future development plans
 
-1. Implement testing with [Jest](https://jestjs.io/)
-2. Convert to Progress Web App
-3. Deep-dive [GraphQL](https://graphql.org/) with [Apollo](https://github.com/apollographql/react-apollo)
-4. Deep-dive [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/)
+1. Implement testing with [Jest](https://jestjs.io/).
+2. Convert to a Progressive Web App.
+3. Deep-dive [GraphQL](https://graphql.org/) with [Apollo](https://github.com/apollographql/react-apollo).
+4. Deep-dive [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
+5. Finish converting styles to use styled components.
+6. Finish adding mobile styles.
