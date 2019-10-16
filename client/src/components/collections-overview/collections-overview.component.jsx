@@ -9,7 +9,7 @@ import CollectionPreview from '../collection-preview/collection-preview.componen
 import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
 
 // Styles
-import './collections-overview.component';
+import { CollectionsOverviewContainer } from './collections-overview.styles';
 
 /**
  * Display collections overview.
@@ -17,13 +17,13 @@ import './collections-overview.component';
  * @param {Array} collections - list of collections.
  */
 const CollectionsOverview = ({ collections }) => (
-    <div className='collections-overview'>
+    <CollectionsOverviewContainer>
         {
             collections.map(({ id, ...otherCollectionProps }) => (
                 <CollectionPreview key={id} {...otherCollectionProps} />
             ))
         }
-    </div>
+    </CollectionsOverviewContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

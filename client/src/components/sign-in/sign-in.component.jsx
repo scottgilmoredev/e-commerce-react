@@ -9,7 +9,11 @@ import FormInput from '../form-input/form-input.component';
 import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actions';
 
 // Styles
-import './sign-in.styles.scss';
+import {
+    ButtonBarContainer,
+    SignInContainer,
+    SignInTitle,
+} from './sign-in.styles';
 
 /**
  * Display the sign-in form.
@@ -39,8 +43,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     };
 
     return (
-        <div className='sign-in'>
-            <h2>I already have an account</h2>
+        <SignInContainer>
+            <SignInTitle>I already have an account</SignInTitle>
             <span>Sign in with your email and password</span>
 
             <form onSubmit={ handleSubmit }>
@@ -65,7 +69,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
                 />
 
                 { /* Submit: Sign In, Sign In with Google */ }
-                <div className='buttons'>
+                <ButtonBarContainer>
                     <CustomButton type='submit'>Sign In</CustomButton>
                     <CustomButton
                         type='button'
@@ -74,9 +78,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
                     >
                         Sign In with Google
                     </CustomButton>
-                </div>
+                </ButtonBarContainer>
             </form>
-        </div>
+        </SignInContainer>
     );
 };
 

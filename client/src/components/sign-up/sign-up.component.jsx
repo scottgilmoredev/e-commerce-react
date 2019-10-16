@@ -9,7 +9,7 @@ import FormInput from '../form-input/form-input.component';
 import { signUpStart } from '../../redux/user/user.actions';
 
 // Styles
-import './sign-up.styles.scss';
+import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 /**
  * Display the sign-up form.
@@ -49,11 +49,11 @@ const SignUp = ({ signUpStart }) => {
     };
 
     return (
-        <div className='sign-up'>
-            <h2 className='title'>I do not have an account</h2>
+        <SignUpContainer>
+            <SignUpTitle>I do not have an account</SignUpTitle>
             <span>Sign up with you email and password</span>
 
-            <form className='sign-up-form' onSubmit={ handleSubmit }>
+            <form onSubmit={ handleSubmit }>
                 { /* Display name */ }
                 <FormInput
                     name='displayName'
@@ -97,7 +97,7 @@ const SignUp = ({ signUpStart }) => {
                 { /* Submit */ }
                 <CustomButton type='submit'>Sign Up</CustomButton>
             </form>
-        </div>
+        </SignUpContainer>
     );
 };
 
