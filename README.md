@@ -2,7 +2,7 @@
 
 Come on in! Shop till you drop. Sign up, sign in with Google, checkout. Do it all! You can feel good about Harry's Hoods.
 
-This project is a complete e-commerce web app built to learn the [React](https://reactjs.org/) JavaScript library.
+This project is a complete e-commerce Progressive Web App built to learn the [React](https://reactjs.org/) JavaScript library.
 
 ## Technologies used
 
@@ -19,6 +19,7 @@ In addition to a deeper understanding of React, I learned:
 7. [Styled Components](https://www.styled-components.com) for styling the app with JS.
 8. [Redux Saga](https://github.com/redux-saga/redux-saga), a popular library for handling Redux app side effects.
 9. [React Hooks](https://reactjs.org/docs/hooks-intro.html), for using state in functional components.
+10. How to modify the app to make it a [Progressive Web App](https://developers.google.com/web/progressive-web-apps).
 
 ## Future development and learning plans
 
