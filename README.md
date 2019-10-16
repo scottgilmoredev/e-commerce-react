@@ -6,7 +6,7 @@ This project is a complete e-commerce web app built to learn the React JavaScrip
 
 ## Technologies used
 
-In addition to [React](https://reactjs.org/), I learned / utilized:
+In addition to a deeper understanding of [React](https://reactjs.org/), I learned / utilized:
 
 1. [React Router](https://github.com/ReactTraining/react-router) for routing.
 2. [Redux](https://redux.js.org/) for state management.
