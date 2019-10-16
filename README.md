@@ -2,11 +2,11 @@
 
 Come on in! Shop till you drop. Sign up, sign in with Google, checkout. Do it all! You can feel good about Harry's Hoods.
 
-This project is a complete e-commerce web app built to learn the React JavaScript library.
+This project is a complete e-commerce web app built to learn the [React](https://reactjs.org/) JavaScript library.
 
 ## Technologies used
 
-In addition to a deeper understanding of [React](https://reactjs.org/), I learned / utilized:
+In addition to a deeper understanding of React, I learned:
 
 1. [React Router](https://github.com/ReactTraining/react-router) for routing.
 2. [Redux](https://redux.js.org/) for state management.
@@ -20,11 +20,10 @@ In addition to a deeper understanding of [React](https://reactjs.org/), I learne
 8. [Redux Saga](https://github.com/redux-saga/redux-saga), a popular library for handling Redux app side effects.
 9. [React Hooks](https://reactjs.org/docs/hooks-intro.html), for using state in functional components.
 
-## Future development plans
+## Future development and learning plans
 
 1. Implement testing with [Jest](https://jestjs.io/).
-2. Convert to a Progressive Web App.
-3. Deep-dive [GraphQL](https://graphql.org/) with [Apollo](https://github.com/apollographql/react-apollo).
-4. Deep-dive [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
-5. Finish converting styles to use styled components.
-6. Finish adding mobile styles.
+2. Deep-dive [GraphQL](https://graphql.org/) with [Apollo](https://github.com/apollographql/react-apollo).
+3. Deep-dive [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
+4. Finish converting styles to use styled components.
+5. Finish adding mobile styles.
