@@ -26,5 +26,3 @@ In addition to a deeper understanding of React, I learned:
 1. Implement testing with [Jest](https://jestjs.io/).
 2. Deep-dive [GraphQL](https://graphql.org/) with [Apollo](https://github.com/apollographql/react-apollo).
 3. Deep-dive [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
-4. Finish converting styles to use styled components.
-5. Finish adding mobile styles.
