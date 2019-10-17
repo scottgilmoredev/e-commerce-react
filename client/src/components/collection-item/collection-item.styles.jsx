@@ -14,7 +14,7 @@ export const CollectionItemContainer = styled.div`
       opacity: 0.8;
     }
 
-    button{
+    button {
       display: flex;
       opacity: 0.85;
     }
