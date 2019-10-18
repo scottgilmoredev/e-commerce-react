@@ -42,3 +42,9 @@ export const OptionDiv = styled.div`
     cursor: pointer;
     padding: 10px 15px;
 `;
+
+// Display names.
+HeaderContainer.displayName = 'HeaderContainer';
+LogoContainer.displayName = 'LogoContainer';
+OptionsContainer.displayName = 'OptionsContainer';
+OptionDiv.displayName = 'OptionDiv';

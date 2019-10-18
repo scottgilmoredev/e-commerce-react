@@ -26,7 +26,7 @@ import {
 /**
  * Display the app header.
  */
-const Header = ({ currentUser, hidden, signOutStart }) => (
+export const Header = ({ currentUser, hidden, signOutStart }) => (
     <HeaderContainer>
         { /* Logo */ }
         <LogoContainer to='/'>
