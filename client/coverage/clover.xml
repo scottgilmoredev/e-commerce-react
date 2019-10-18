@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571423999973" clover="3.2.0">
-  <project timestamp="1571423999973" name="All files">
-    <metrics statements="13" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="1" elements="20" coveredelements="17" complexity="0" loc="13" ncloc="13" packages="1" files="2" classes="2"/>
-    <file name="header.component.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/header/header.component.jsx">
-      <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="1"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="30" count="8" type="stmt"/>
-      <line num="57" count="1" type="stmt"/>
-      <line num="58" count="0" type="stmt"/>
-      <line num="61" count="1" type="stmt"/>
-    </file>
-    <file name="header.styles.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/header/header.styles.jsx">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="41" count="1" type="stmt"/>
-      <line num="47" count="1" type="stmt"/>
-      <line num="48" count="1" type="stmt"/>
-      <line num="49" count="1" type="stmt"/>
-      <line num="50" count="1" type="stmt"/>
-    </file>
+<coverage generated="1571424200574" clover="3.2.0">
+  <project timestamp="1571424200574" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
