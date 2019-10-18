@@ -28,3 +28,7 @@ export const SpinnerContainer = styled.div`
     }
   }
 `;
+
+// Display names.
+SpinnerOverlay.displayName = 'SpinnerOverlay';
+SpinnerContainer.displayName = 'SpinnerContainer';
