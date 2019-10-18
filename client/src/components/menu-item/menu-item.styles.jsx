@@ -73,3 +73,10 @@ export const ContentSubtitle = styled.span`
     font-size: 16px;
     font-weight: lighter;
 `;
+
+// Display names.
+MenuItemContainer.displayName = 'MenuItemContainer';
+BackgroundImageContainer.displayName = 'BackgroundImageContainer';
+ContentContainer.displayName = 'ContentContainer';
+ContentTitle.displayName = 'ContentTitle';
+ContentSubtitle.displayName = 'ContentSubtitle';

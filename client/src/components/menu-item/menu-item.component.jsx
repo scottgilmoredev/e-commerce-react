@@ -20,7 +20,7 @@ import {
  * @param {Object} history - react router dom history.
  * @param {Object} match - react router dom match.
  */
-const MenuItem = ({ imageUrl, linkUrl, size, title, history, match }) => (
+export const MenuItem = ({ imageUrl, linkUrl, size, title, history, match }) => (
     <MenuItemContainer
         size={ size }
         onClick={() => history.push(`${ match.url }${ linkUrl }`)}    
