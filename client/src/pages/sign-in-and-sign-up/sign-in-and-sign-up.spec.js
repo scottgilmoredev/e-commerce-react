@@ -6,5 +6,5 @@ import SignInAndSignUpPage from './sign-in-and-sign-up.component';
 
 // Render the component
 it('should render SignInAndSignUpPage component', () => {
-  expect(shallow(<SignInAndSignUpPage />)).toMatchSnapshot();
+    expect(shallow(<SignInAndSignUpPage />)).toMatchSnapshot();
 });

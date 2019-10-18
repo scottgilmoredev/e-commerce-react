@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571433333847" clover="3.2.0">
-  <project timestamp="1571433333847" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1571435712994" clover="3.2.0">
+  <project timestamp="1571435712994" name="All files">
+    <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0" elements="6" coveredelements="0" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="saga-testing.utils.js" path="/Users/reba/Code/react-course/harrys-hoods/client/src/redux/saga-testing.utils.js">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+    </file>
   </project>
 </coverage>
