@@ -13,7 +13,7 @@ import {
     TextContainer,
 } from './checkout-item.styles';
 
-const CheckoutItem = ({ cartItem, addItem, clearItem, removeItem }) => {
+export const CheckoutItem = ({ cartItem, addItem, clearItem, removeItem }) => {
     const { imageUrl, name, price, quantity } = cartItem;
 
     return (
