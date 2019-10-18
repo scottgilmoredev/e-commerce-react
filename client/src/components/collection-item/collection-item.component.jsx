@@ -19,7 +19,7 @@ import {
  * @param {Function} addItem - add item action.
  * @param {Object} item - id, imageUrl, name, price.
  */
-const CollectionItem = ({ addItem, item }) => {
+export const CollectionItem = ({ addItem, item }) => {
     const { imageUrl, name, price } = item;
 
     return (
@@ -39,7 +39,7 @@ const CollectionItem = ({ addItem, item }) => {
             { /* Add to cart */ }
             <AddButton
                 inverted
-                onClick={() => addItem(item)}
+                onClick={ () => addItem(item) }
             >
                 Add to cart
             </AddButton>

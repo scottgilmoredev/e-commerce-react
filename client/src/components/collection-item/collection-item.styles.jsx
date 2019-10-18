@@ -76,3 +76,11 @@ export const PriceContainer = styled.span`
   text-align: right;
   width: 10%;
 `;
+
+// Display names.
+CollectionItemContainer.displayName = 'CollectionItemContainer';
+AddButton.displayName = 'AddButton';
+BackgroundImage.displayName = 'BackgroundImage';
+CollectionFooterContainer.displayName = 'CollectionFooterContainer';
+NameContainer.displayName = 'NameContainer';
+PriceContainer.displayName = 'PriceContainer';
