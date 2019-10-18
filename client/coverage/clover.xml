@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571421375859" clover="3.2.0">
-  <project timestamp="1571421375859" name="All files">
-    <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="6" coveredelements="4" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
-    <file name="directory.component.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/directory/directory.component.jsx">
-      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="27" count="1" type="stmt"/>
-    </file>
+<coverage generated="1571422567876" clover="3.2.0">
+  <project timestamp="1571422567876" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
