@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571420960588" clover="3.2.0">
-  <project timestamp="1571420960588" name="All files">
-    <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2" elements="15" coveredelements="11" complexity="0" loc="11" ncloc="11" packages="1" files="2" classes="2"/>
-    <file name="collection-preview.component.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/collection-preview/collection-preview.component.jsx">
-      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+<coverage generated="1571421072892" clover="3.2.0">
+  <project timestamp="1571421072892" name="All files">
+    <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="6" coveredelements="4" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="collections-overview.component.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/collections-overview/collections-overview.component.jsx">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <line num="19" count="1" type="stmt"/>
-      <line num="20" count="2" type="stmt"/>
-      <line num="22" count="1" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="32" count="0" type="stmt"/>
-    </file>
-    <file name="collection-preview.styles.jsx" path="/Users/reba/Code/react-course/harrys-hoods/client/src/components/collection-preview/collection-preview.styles.jsx">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="35" count="1" type="stmt"/>
-      <line num="36" count="1" type="stmt"/>
-      <line num="37" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

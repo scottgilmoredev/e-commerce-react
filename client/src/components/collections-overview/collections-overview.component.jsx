@@ -16,7 +16,7 @@ import { CollectionsOverviewContainer } from './collections-overview.styles';
  * This component maps the collections and renders them with CollectionPreview component.
  * @param {Array} collections - list of collections.
  */
-const CollectionsOverview = ({ collections }) => (
+export const CollectionsOverview = ({ collections }) => (
     <CollectionsOverviewContainer>
         {
             collections.map(({ id, ...otherCollectionProps }) => (
