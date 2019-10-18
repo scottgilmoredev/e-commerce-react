@@ -13,7 +13,7 @@ import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
  * Display the shop page.
  * This component renders the CollectionOverview and CollectionPage components.
  */
-const ShopPage = ({ fetchCollectionsStart, match }) => {
+export const ShopPage = ({ fetchCollectionsStart, match }) => {
     useEffect(() => {
         fetchCollectionsStart();
     }, [fetchCollectionsStart]);
