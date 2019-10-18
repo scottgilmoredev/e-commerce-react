@@ -8,7 +8,7 @@ import { CustomButtonContainer } from './custom-button.styles';
  * @param {String} children - button title.
  * @param {Object} props - inverted, isGoogleSignIn, onClick, type.
  */
-const CustomButton = ({ children, ...props }) => (
+export const CustomButton = ({ children, ...props }) => (
     <CustomButtonContainer {...props}>
         {children}
     </CustomButtonContainer>
