@@ -14,7 +14,7 @@ import { DirectoryMenuContainer } from './directory.styles';
 /**
  * Display the store menu items.
  */
-const Directory = ({ sections }) => (
+export const Directory = ({ sections }) => (
     <DirectoryMenuContainer>
         {
             sections.map(({ id, ...otherSectionProps }) => (
