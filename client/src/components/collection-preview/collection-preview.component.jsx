@@ -16,7 +16,7 @@ import {
  * @param {Array} items - list of collection items.
  * @param {String} title - collection title.
  */
-const CollectionPreview = ({ items, title, history, match, routeName }) => (
+export const CollectionPreview = ({ items, title, history, match, routeName }) => (
     <CollectionPreviewContainer>
         { /* Title */ }
         <TitleContainer onClick={() => history.push(`${ match.path }/${ routeName }`)}>

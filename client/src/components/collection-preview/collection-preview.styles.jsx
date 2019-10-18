@@ -30,3 +30,8 @@ export const PreviewContainer = styled.div`
         grid-gap: 15px;
     }
 `;
+
+// Display names.
+CollectionPreviewContainer.displayName = 'CollectionPreviewContainer';
+TitleContainer.displayName = 'TitleContainer';
+PreviewContainer.displayName = 'PreviewContainer';
