@@ -20,7 +20,7 @@ import {
  * and renders them with the CollectionItem component
  * @param {Object} collection - collection of shop items.
  */
-const CollectionPage = ({ collection }) => {
+export const CollectionPage = ({ collection }) => {
     const { title, items } = collection;
 
     return (
