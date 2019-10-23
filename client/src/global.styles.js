@@ -13,10 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Open Sans Condensed';
         margin-bottom: 40px;
-        padding: 20px 40px;
-
-        @media screen and (max-width: 800px) {
-            padding: 10px;
-        }
+        min-width: 320px;
+        padding: 20px 16px;
     }
 `;
