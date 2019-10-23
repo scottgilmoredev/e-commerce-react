@@ -7,22 +7,23 @@ import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 
 // Redux
-import { signUpStart } from '../../redux/user/user.actions';
+import { signUpStart, googleSignInStart } from '../../redux/user/user.actions';
 
 // Styles
 import { SignInAndSignUpContainer } from '../../pages/sign-in-and-sign-up/sign-in-and-sign-up.styles';
 import {
     LinkText,
+    SeparatorContainer,
     SignInContainer,
     SignUpContainer,
+    SignUpSubtitle,
     SignUpTitle,
-    SignUpTitleContainer
 } from './sign-up.styles';
 
 /**
  * Display the sign-up form.
  */
-const SignUp = ({ signUpStart, history }) => {
+const SignUp = ({ googleSignInStart, signUpStart, history }) => {
     const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
@@ -59,10 +60,23 @@ const SignUp = ({ signUpStart, history }) => {
     return (
         <SignInAndSignUpContainer>
             <SignUpContainer>
-                <SignUpTitleContainer>
-                    <SignUpTitle>Welcome!</SignUpTitle>
-                    <span>We just need a bit of info to create an account for you.</span>
-                </SignUpTitleContainer>
+                <SignUpTitle>Welcome!</SignUpTitle>
+
+                { /* Sign up with Google */ }
+                <CustomButton
+                    type='button'
+                    isGoogleSignIn
+                    onClick={ googleSignInStart }
+                    >
+                    Sign Up with Google
+                </CustomButton>
+
+                { /* Separator */ }
+                <SeparatorContainer>
+                    <span>OR</span>
+                </SeparatorContainer>
+
+                <SignUpSubtitle>We just need a bit of info to create an account for you.</SignUpSubtitle>
 
                 <form onSubmit={ handleSubmit }>
                     { /* Display name */ }
@@ -122,6 +136,7 @@ const SignUp = ({ signUpStart, history }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+    googleSignInStart: () => dispatch(googleSignInStart()),
     signUpStart: userCredentials => dispatch(signUpStart(userCredentials)),
 });
 
