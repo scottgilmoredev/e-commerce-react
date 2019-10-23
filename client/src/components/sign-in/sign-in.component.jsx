@@ -11,8 +11,8 @@ import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actio
 
 // Styles
 import {
-    ButtonBarContainer,
     LinkText,
+    SeparatorContainer,
     SignInContainer,
     SignInTitle,
     SignUpContainer,
@@ -47,7 +47,21 @@ const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
 
     return (
         <SignInContainer>
-            <SignInTitle>Welcome back. Login to your account.</SignInTitle>
+            <SignInTitle>Welcome back. Sign in to your account.</SignInTitle>
+
+            { /* Sign in with Google */ }
+            <CustomButton
+                type='button'
+                isGoogleSignIn
+                onClick={ googleSignInStart }
+                >
+                Sign In with Google
+            </CustomButton>
+
+            { /* Separator */ }
+            <SeparatorContainer>
+                <span>OR</span>
+            </SeparatorContainer>
 
             <form onSubmit={ handleSubmit }>
                 { /* Email */ }
@@ -70,18 +84,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
                     handleChange={ handleChange }
                 />
 
-                { /* Submit: Sign In, Sign In with Google */ }
-                <ButtonBarContainer>
-                    <CustomButton type='submit'>Continue</CustomButton>
-                    <p>OR</p>
-                    <CustomButton
-                        type='button'
-                        isGoogleSignIn
-                        onClick={ googleSignInStart }
-                    >
-                        Sign In with Google
-                    </CustomButton>
-                </ButtonBarContainer>
+                { /* Submit: Sign In */ }
+                <CustomButton type='submit'>Continue</CustomButton>
 
                 { /* Sign up link */ }
                 <SignUpContainer>

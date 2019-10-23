@@ -1,14 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const ButtonBarContainer = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+const separator = css`
+    border-bottom: 1px solid black;
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: calc(50% - 0em);
 `;
 
 export const LinkText = styled.a`
     color: #0366d6;
     cursor: pointer;
+`;
+
+export const SeparatorContainer = styled.div`
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 1em;
+
+        &::before {
+            ${separator};
+            margin-right: 0.5em;
+        }
+
+        &::after {
+            ${separator};
+            margin-left: 0.5em;
+        }
 `;
 
 export const SignInContainer = styled.div`
@@ -22,7 +41,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const SignInTitle = styled.h2`
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     text-align: center;
 `;
 
@@ -32,7 +51,6 @@ export const SignUpContainer = styled.div`
 `;
 
 // Display names
-ButtonBarContainer.displayName ='ButtonBarContainer';
 LinkText.displayName = 'LinkText';
 SignInContainer.displayName ='SignInContainer';
 SignInTitle.displayName ='SignInTitle';
