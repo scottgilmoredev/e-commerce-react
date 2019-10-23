@@ -7,6 +7,7 @@ import { createStructuredSelector } from 'reselect';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 import Footer from './components/footer/footer.component';
 import Header from './components/header/header.component';
+import SignUp from './components/sign-up/sign-up.component';
 import Spinner from './components/spinner/spinner.component';
 
 // Redux
@@ -66,6 +67,9 @@ const App = ({ checkUserSession, currentUser }) => {
                 ? <Redirect to='/' />
                 : <SignInAndSignUp />}
             />
+
+            { /* Sign up */ }
+            <Route exact path='/signup' component={ SignUp } />
           </Suspense>
         </ErrorBoundary>
       </Switch>

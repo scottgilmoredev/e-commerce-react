@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 // Components
 import CustomButton from '../custom-button/custom-button.component';
@@ -11,14 +12,16 @@ import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actio
 // Styles
 import {
     ButtonBarContainer,
+    LinkText,
     SignInContainer,
     SignInTitle,
+    SignUpContainer,
 } from './sign-in.styles';
 
 /**
  * Display the sign-in form.
  */
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
     const { email, password } = userCredentials;
 
@@ -44,8 +47,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
     return (
         <SignInContainer>
-            <SignInTitle>I already have an account</SignInTitle>
-            <span>Sign in with your email and password</span>
+            <SignInTitle>Welcome back. Login to your account.</SignInTitle>
 
             <form onSubmit={ handleSubmit }>
                 { /* Email */ }
@@ -70,7 +72,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
                 { /* Submit: Sign In, Sign In with Google */ }
                 <ButtonBarContainer>
-                    <CustomButton type='submit'>Sign In</CustomButton>
+                    <CustomButton type='submit'>Continue</CustomButton>
+                    <p>OR</p>
                     <CustomButton
                         type='button'
                         isGoogleSignIn
@@ -79,6 +82,14 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
                         Sign In with Google
                     </CustomButton>
                 </ButtonBarContainer>
+
+                { /* Sign up link */ }
+                <SignUpContainer>
+                    Don't have an account?
+                    <LinkText onClick={() => history.push('/signup')}>
+                        &nbsp;Create one now.
+                    </LinkText>
+                </SignUpContainer>
             </form>
         </SignInContainer>
     );
@@ -89,4 +100,4 @@ const mapDispatchToProps = dispatch => ({
     googleSignInStart: () => dispatch(googleSignInStart()),
 });
 
-export default connect(null, mapDispatchToProps)(SignIn);
+export default withRouter(connect(null, mapDispatchToProps)(SignIn));

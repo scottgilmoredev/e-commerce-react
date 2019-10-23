@@ -2,18 +2,12 @@ import styled from 'styled-components';
 
 export const SignInAndSignUpContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 30px auto;
-    width: 850px;
+    width: auto;
 
-    @media screen and (max-width: 900px) {
-        align-items: center;
-        flex-direction: column;
+    @media screen and (max-width: 800px) {
         width: unset;
-
-        > *:first-child {
-            margin-bottom: 50px;
-        }
     }
 `;
 
