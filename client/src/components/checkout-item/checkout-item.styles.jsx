@@ -22,6 +22,10 @@ export const ImageContainer = styled.div`
     height: 100%;
     width: 100%;
   }
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+  }
 `;
 
 export const TextContainer = styled.span`

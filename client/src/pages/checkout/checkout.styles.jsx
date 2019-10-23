@@ -13,12 +13,16 @@ export const CheckoutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px auto 0;
-  min-height: 90vh;
+  min-height: 80vh;
   width: 55%;
 
   button {
     margin-left: auto;
     margin-top: 50px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
   }
 `;
 
