@@ -31,6 +31,9 @@ export const SignUpTitleContainer = styled.div`
   text-align: center;
 `;
 
-// Display names
+// Display names.
+LinkText.displayName = 'LinkText';
+SignInContainer.displayName = 'SignInContainer';
 SignUpContainer.displayName = 'SignUpContainer';
 SignUpTitle.displayName = 'SignUpTitle';
+SignUpTitleContainer.displayName = 'SignUpTitleContainer';

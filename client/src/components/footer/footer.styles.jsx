@@ -16,3 +16,7 @@ export const FooterContainer = styled.div`
 export const LinkText = styled.a`
     color: #0366d6;
 `;
+
+// Display names.
+FooterContainer.displayName = 'FooterContainer';
+LinkText.displayName = 'LinkText';
