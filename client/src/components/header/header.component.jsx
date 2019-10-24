@@ -37,7 +37,7 @@ export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart,
         <HamburgerMenu />
 
         { /* Logo */ }
-        <LogoContainer to='/' onClick={ toggleHamburgerMenu }>
+        <LogoContainer to='/' onClick={ hamburgerHidden ? null : toggleHamburgerMenu }>
             <Logo />
         </LogoContainer>
 
@@ -68,7 +68,7 @@ export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart,
 );
 
 const mapDispatchToProps = dispatch => ({
-    signOutStart: () => dispatch(signOutStart()),
+    signOutStart: () => dispatch(signOutStart({ payload: true })),
     toggleHamburgerMenu: () => dispatch(toggleHamburgerMenu()),
 });
 

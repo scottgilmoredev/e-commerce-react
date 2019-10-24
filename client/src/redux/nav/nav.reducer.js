@@ -9,7 +9,7 @@ const navReducer = (state = INITIAL_STATE, action) => {
         case NavActionTypes.TOGGLE_HAMBURGER_MENU:
             return {
                 ...state,
-                hamburgerHidden: !state.hamburgerHidden,
+                hamburgerHidden: action.payload ? action.payload : !state.hamburgerHidden,
             };
 
         default:
