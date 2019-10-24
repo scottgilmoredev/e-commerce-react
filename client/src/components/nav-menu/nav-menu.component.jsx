@@ -10,7 +10,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 // Styles
 import { NavLink, NavMenuContainer  } from './nav-menu.styles';
 
-export const NavMenu = ({ currentUser, toggleHamburgerMenu }) => (
+export const NavMenu = ({ currentUser, signOutStart, toggleHamburgerMenu }) => (
     <NavMenuContainer>
         { /* Home */ }
         <NavLink
@@ -42,7 +42,10 @@ export const NavMenu = ({ currentUser, toggleHamburgerMenu }) => (
                 ? (
                     <NavLink
                         as='div'
-                        onClick={ signOutStart }
+                        onClick={() => {
+                            signOutStart();
+                            toggleHamburgerMenu();
+                        }}
                     >
                         SIGN OUT
                     </NavLink>
