@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // Icons
 import { ReactComponent as GitHubIconSVG } from '../../assets/Github.svg';
 import { ReactComponent as LinkedInIconSVG } from '../../assets/Linkedin.svg';
+import { AST_ObjectKeyVal } from 'terser';
 
 export const ContactPageContainer = styled.div`
     align-items: center;
@@ -25,12 +26,6 @@ export const Avatar = styled.img`
     height: 335px;
     object-fit: cover;
     width: 100%;
-
-    &:hover,
-    &:active {
-        transform: scale(1.1);
-        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
 `;
 
 export const ContactText = styled.p`
