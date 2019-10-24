@@ -3,7 +3,7 @@ import { addItemToCart, removeItemFromCart } from './cart.utils';
 
 const INITIAL_STATE = {
     cartItems: [],
-    hidden: true,
+    cartHidden: true,
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -35,7 +35,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         case CartActionTypes.TOGGLE_CART_HIDDEN:
             return {
                 ...state,
-                hidden: !state.hidden,
+                cartHidden: !state.cartHidden,
             };    
     
         default:
