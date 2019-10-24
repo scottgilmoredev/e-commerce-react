@@ -90,7 +90,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
                 { /* Sign up link */ }
                 <SignUpContainer>
                     Don't have an account?
-                    <LinkText onClick={() => history.push('/signup')}>
+                    <LinkText to='/signup'>
                         &nbsp;Create one now.
                     </LinkText>
                 </SignUpContainer>

@@ -125,7 +125,7 @@ const SignUp = ({ googleSignInStart, signUpStart, history }) => {
                     { /* Sign in */ }
                     <SignInContainer>
                         Already have an account?
-                        <LinkText onClick={() => history.push('/signin')}>
+                        <LinkText to='/signin'>
                             &nbsp;Login.
                         </LinkText>
                     </SignInContainer>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const separator = css`
     border-bottom: 1px solid black;
@@ -8,7 +9,7 @@ const separator = css`
     width: calc(50% - 0em);
 `;
 
-export const LinkText = styled.a`
+export const LinkText = styled(Link)`
     color: #0366d6;
     cursor: pointer;
 `;
