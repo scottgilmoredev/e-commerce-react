@@ -9,16 +9,20 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 // Components
 import CartDropDown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.component';
+import HamburgerMenu from '../hamburger-menu/hamburger-menu.component';
+import NavMenu from '../nav-menu/nav-menu.component';
 
 // Redux
 import { signOutStart } from '../../redux/user/user.actions';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectHamburgerHidden } from '../../redux/nav/nav.selectors';
 
 // Styles
 import {
     HeaderContainer,
     LogoContainer,
+    NavContainer,
     OptionsContainer,
     OptionDiv,
 } from './header.styles';
@@ -26,31 +30,39 @@ import {
 /**
  * Display the app header.
  */
-export const Header = ({ currentUser, hidden, signOutStart }) => (
+export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart }) => (
     <HeaderContainer>
+        { /* Hamburger menu */ }
+        <HamburgerMenu />
+
         { /* Logo */ }
         <LogoContainer to='/'>
             <Logo />
         </LogoContainer>
 
         { /* Nav Links: Shop, Contact, Sign Out, and Cart Icon */ }
-        <OptionsContainer>
-            <OptionDiv as={ Link } to='/shop'>SHOP</OptionDiv>
-            <OptionDiv as={ Link } to='/contact'>CONTACT</OptionDiv>
+        <NavContainer>
+            <OptionsContainer>
+                <OptionDiv as={ Link } to='/shop'>SHOP</OptionDiv>
+                <OptionDiv as={ Link } to='/contact'>CONTACT</OptionDiv>
 
-            { /* Sign Out */ }
-            {
-                currentUser
-                    ? <OptionDiv onClick={ signOutStart }>SIGN OUT</OptionDiv>
-                    : <OptionDiv as={ Link } to='/signin'>SIGN IN</OptionDiv>
-            }
-    
+                { /* Sign in / Sign Out */ }
+                {
+                    currentUser
+                        ? <OptionDiv onClick={ signOutStart }>SIGN OUT</OptionDiv>
+                        : <OptionDiv as={ Link } to='/signin'>SIGN IN</OptionDiv>
+                }
+            </OptionsContainer>
+
             { /* Cart Icon */ }
             <CartIcon />
-        </OptionsContainer>
+        </NavContainer>
+
+        { /* Nav menu */ }
+        { hamburgerHidden ? null : <NavMenu /> }
 
         { /* Cart dropdown */ }
-        { hidden ? null : <CartDropDown /> }
+        { cartHidden ? null : <CartDropDown /> }
     </HeaderContainer>
 );
 
@@ -60,7 +72,8 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
-    hidden: selectCartHidden,
+    cartHidden: selectCartHidden,
+    hamburgerHidden: selectHamburgerHidden,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
