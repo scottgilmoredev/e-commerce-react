@@ -22,6 +22,7 @@ export const CheckoutPageContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    max-width: 450px;
     width: 100%;
   }
 `;
