@@ -26,7 +26,8 @@ export const Avatar = styled.img`
     object-fit: cover;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:active {
         transform: scale(1.1);
         transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
