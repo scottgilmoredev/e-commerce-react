@@ -33,7 +33,7 @@ export const MenuItem = ({ imageUrl, linkUrl, size, title, history, match }) => 
 
         { /* Menu item content */ }
         <ContentContainer className='content'>
-            <ContentTitle>{title.toUpperCase()}</ContentTitle>
+            <ContentTitle>{ title.toUpperCase() }</ContentTitle>
             <ContentSubtitle>SHOP NOW</ContentSubtitle>
         </ContentContainer>
     </MenuItemContainer>

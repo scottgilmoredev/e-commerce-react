@@ -7,7 +7,6 @@ import { createStructuredSelector } from 'reselect';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 import Footer from './components/footer/footer.component';
 import Header from './components/header/header.component';
-import SignUp from './components/sign-up/sign-up.component';
 import Spinner from './components/spinner/spinner.component';
 
 // Redux
@@ -22,9 +21,11 @@ import { GlobalStyle } from './global.styles';
 
 // Lazy Loaded Components
 const CheckoutPage = lazy(() => import ('./pages/checkout/checkout.component.jsx'));
+const ContactPage = lazy(() => import ('./pages/contact/contact.component.jsx'));
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUp = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
+const SignUp = lazy(() => import('./components/sign-up/sign-up.component'));
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -50,14 +51,17 @@ const App = ({ checkUserSession, currentUser }) => {
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={ <Spinner /> }>
+            { /* Checkout */ }
+            <Route exact path='/checkout' component={ CheckoutPage } />
+
+            { /* Contact */ }
+            <Route exact path='/contact' component={ ContactPage } />
+
             { /* Home */ }
             <Route exact path='/' component={ HomePage } />
 
             { /* Shop */ }
             <Route path='/shop' component={ ShopPage } />
-
-            { /* Checkout */ }
-            <Route exact path='/checkout' component={ CheckoutPage } />
 
             { /* Sign in / Sign out */ }
             <Route

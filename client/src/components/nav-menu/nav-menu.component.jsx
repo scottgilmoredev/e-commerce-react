@@ -12,6 +12,14 @@ import { NavLink, NavMenuContainer  } from './nav-menu.styles';
 
 export const NavMenu = ({ currentUser, toggleHamburgerMenu }) => (
     <NavMenuContainer>
+        { /* Home */ }
+        <NavLink
+            to='/'
+            onClick={ toggleHamburgerMenu }
+        >
+            HOME
+        </NavLink>
+
         { /* Shop */ }
         <NavLink
             to='/shop'
@@ -26,14 +34,6 @@ export const NavMenu = ({ currentUser, toggleHamburgerMenu }) => (
             onClick={ toggleHamburgerMenu }
         >
             CONTACT
-        </NavLink>
-
-        { /* Home */ }
-        <NavLink
-            to='/'
-            onClick={ toggleHamburgerMenu }
-        >
-            HOME
         </NavLink>
 
         { /* Sign in / Sign out */ }
