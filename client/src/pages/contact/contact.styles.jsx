@@ -3,7 +3,6 @@ import styled from 'styled-components';
 // Icons
 import { ReactComponent as GitHubIconSVG } from '../../assets/Github.svg';
 import { ReactComponent as LinkedInIconSVG } from '../../assets/Linkedin.svg';
-import { AST_ObjectKeyVal } from 'terser';
 
 export const ContactPageContainer = styled.div`
     align-items: center;
