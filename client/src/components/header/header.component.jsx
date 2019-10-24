@@ -17,6 +17,7 @@ import { signOutStart } from '../../redux/user/user.actions';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectHamburgerHidden } from '../../redux/nav/nav.selectors';
+import { toggleHamburgerMenu } from '../../redux/nav/nav.actions';
 
 // Styles
 import {
@@ -30,13 +31,13 @@ import {
 /**
  * Display the app header.
  */
-export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart }) => (
+export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart, toggleHamburgerMenu }) => (
     <HeaderContainer>
         { /* Hamburger menu */ }
         <HamburgerMenu />
 
         { /* Logo */ }
-        <LogoContainer to='/'>
+        <LogoContainer to='/' onClick={ toggleHamburgerMenu }>
             <Logo />
         </LogoContainer>
 
@@ -68,6 +69,7 @@ export const Header = ({ cartHidden, currentUser, hamburgerHidden, signOutStart 
 
 const mapDispatchToProps = dispatch => ({
     signOutStart: () => dispatch(signOutStart()),
+    toggleHamburgerMenu: () => dispatch(toggleHamburgerMenu()),
 });
 
 const mapStateToProps = createStructuredSelector({
