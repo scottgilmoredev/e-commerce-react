@@ -69,11 +69,19 @@ const App = ({ checkUserSession, currentUser }) => {
               path='/signin'
               render={() => currentUser
                 ? <Redirect to='/' />
-                : <SignInAndSignUp />}
+                : <SignInAndSignUp />
+              }
             />
 
             { /* Sign up */ }
-            <Route exact path='/signup' component={ SignUp } />
+            <Route
+              exact
+              path='/signup'
+              render={() => currentUser
+                ? <Redirect to='/' />
+                : <SignUp />
+              }
+            />
           </Suspense>
         </ErrorBoundary>
       </Switch>
