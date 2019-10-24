@@ -52,7 +52,7 @@ export const ContactPage = () => (
             <ContactSubHeading>Like what you see?</ContactSubHeading>
             <ContactText>
                 {
-                    `This app was built to teach myself React. I hope you'll slide on over to my` +
+                    `This app was built to teach myself React. I hope you'll slide on over to my ` +
                     `GitHub to view some of my other projects. If you like what I do, please get in touch.`
                 }
             </ContactText>
