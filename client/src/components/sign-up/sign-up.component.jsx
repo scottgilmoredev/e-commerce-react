@@ -7,7 +7,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 
 // Redux
-import { signUpStart, googleSignInStart } from '../../redux/user/user.actions';
+import { signUpStart, githubSignInStart, googleSignInStart } from '../../redux/user/user.actions';
 
 // Styles
 import { SignInAndSignUpContainer } from '../../pages/sign-in-and-sign-up/sign-in-and-sign-up.styles';
@@ -23,7 +23,7 @@ import {
 /**
  * Display the sign-up form.
  */
-const SignUp = ({ googleSignInStart, signUpStart, history }) => {
+const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
     const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
@@ -69,6 +69,14 @@ const SignUp = ({ googleSignInStart, signUpStart, history }) => {
                     onClick={ googleSignInStart }
                     >
                     Sign Up with Google
+                </CustomButton>
+
+                { /* Sign up with GitHub */ }
+                <CustomButton
+                    type='button'
+                    onClick={ githubSignInStart }
+                >
+                    Sign Up with GitHub
                 </CustomButton>
 
                 { /* Separator */ }
@@ -136,6 +144,7 @@ const SignUp = ({ googleSignInStart, signUpStart, history }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+    githubSignInStart: () => dispatch(githubSignInStart()),
     googleSignInStart: () => dispatch(googleSignInStart()),
     signUpStart: userCredentials => dispatch(signUpStart(userCredentials)),
 });

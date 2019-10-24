@@ -43,6 +43,7 @@ const getButtonStyles = props => {
 };
 
 export const CustomButtonContainer = styled.button`
+    border-style: none;
     cursor: pointer;
     display: block;
     font-family: 'Open Sans Condensed';
@@ -51,6 +52,7 @@ export const CustomButtonContainer = styled.button`
     height: 50px;
     justify-content: center;
     letter-spacing: 0.5px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     width: 100%;
 

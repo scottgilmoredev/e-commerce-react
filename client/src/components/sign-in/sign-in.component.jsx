@@ -7,7 +7,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 
 // Redux actions
-import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actions';
+import { emailSignInStart, githubSignInStart, googleSignInStart } from '../../redux/user/user.actions';
 
 // Styles
 import {
@@ -21,7 +21,7 @@ import {
 /**
  * Display the sign-in form.
  */
-const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
+const SignIn = ({ emailSignInStart, githubSignInStart, googleSignInStart }) => {
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
     const { email, password } = userCredentials;
 
@@ -54,8 +54,16 @@ const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
                 type='button'
                 isGoogleSignIn
                 onClick={ googleSignInStart }
-                >
+            >
                 Sign In with Google
+            </CustomButton>
+
+            { /* Sign in with GitHub */ }
+            <CustomButton
+                type='button'
+                onClick={ githubSignInStart }
+            >
+                Sign In with GitHub
             </CustomButton>
 
             { /* Separator */ }
@@ -101,6 +109,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart, history }) => {
 
 const mapDispatchToProps = dispatch => ({
     emailSignInStart: (email, password) => dispatch(emailSignInStart({ email, password })),
+    githubSignInStart: () => dispatch(githubSignInStart()),
     googleSignInStart: () => dispatch(googleSignInStart()),
 });
 

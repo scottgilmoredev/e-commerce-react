@@ -116,6 +116,15 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 /**
+ * GitHug authentication utility.
+ */
+export const githubProvider = new firebase.auth.GithubAuthProvider();
+
+// Trigger GitHub pop-up.
+githubProvider.setCustomParameters({ 'login': 'true' });
+export const signInWithGithub = () => auth.signInWithPopup(githubProvider);
+
+/**
  * Google authentication utility.
  */
 export const googleProvider = new firebase.auth.GoogleAuthProvider();

@@ -5,6 +5,7 @@ import {
     auth,
     createUserProfileDocument,
     getCurrentUser,
+    githubProvider,
     googleProvider,
 } from '../../firebase/firebase.utils';
 
@@ -59,6 +60,15 @@ export function* onEmailSignInStart() {
     yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
 };
 
+export function* signInWithGithub() {
+    try {
+        const { user } = yield auth.signInWithPopup(githubProvider);
+        yield getSnapshotFromUserAuth(user);
+    } catch (error) {
+        yield put(signInFailure(error));
+    }
+};
+
 export function* signInWithGoogle() {
     try {
         const { user } = yield auth.signInWithPopup(googleProvider);
@@ -66,6 +76,10 @@ export function* signInWithGoogle() {
     } catch (error) {
         yield put(signInFailure(error));
     }
+};
+
+export function* onGithubSignInStart() {
+    yield takeLatest(UserActionTypes.GITHUB_SIGN_IN_START, signInWithGithub)
 };
 
 export function* onGoogleSignInStart() {
@@ -111,6 +125,7 @@ export function* userSagas() {
     yield all([
         call(onCheckUserSession),
         call(onEmailSignInStart),
+        call(onGithubSignInStart),
         call(onGoogleSignInStart),
         call(onSignOutStart),
         call(onSignUpStart),

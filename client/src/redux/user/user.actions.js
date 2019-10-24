@@ -9,6 +9,10 @@ export const emailSignInStart = emailAndPassword => ({
     type: UserActionTypes.EMAIL_SIGN_IN_START,
 });
 
+export const githubSignInStart = () => ({
+    type: UserActionTypes.GITHUB_SIGN_IN_START,
+});
+
 export const googleSignInStart = () => ({
     type: UserActionTypes.GOOGLE_SIGN_IN_START,
 });
