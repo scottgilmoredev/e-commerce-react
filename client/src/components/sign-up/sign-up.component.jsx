@@ -67,7 +67,7 @@ const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
                     type='button'
                     isGoogleSignIn
                     onClick={ googleSignInStart }
-                    >
+                >
                     Sign Up with Google
                 </CustomButton>
 
@@ -102,7 +102,7 @@ const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
                         name='email'
                         type='email'
                         label='Email'
-                        value={email}
+                        value={ email }
                         required
                         onChange={ handleChange }
                     />
@@ -112,7 +112,7 @@ const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
                         name='password'
                         type='password'
                         label='Password'
-                        value={password}
+                        value={ password }
                         required
                         onChange={ handleChange }
                     />
