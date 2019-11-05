@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import CartItem from '../cart-item/cart-item.component';
 
 // Redux actions
-import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { clearItemFromCart, toggleCartHidden } from '../../redux/cart/cart.actions';
 
 // Redux selectors
 import { selectCartItems } from '../../redux/cart/cart.selectors';
@@ -17,6 +17,7 @@ import {
     CartDropdownButton,
     CartDropdownContainer,
     CartItemsContainer,
+    CartItemsWrapper,
     EmptyMessageContainer,
 } from './cart-dropdown.styles';
 
@@ -24,16 +25,28 @@ import {
  * Display the cart drop-down menu.
  * The drop-down menu displays a list of cart items and the 'Go to Checkout' button
  */
-export const CartDropdown = ({ cartItems, history, dispatch }) => (
+export const CartDropdown = ({ cartItems, clearItem, history, dispatch }) => (
     <CartDropdownContainer>
         { /* Cart items */ }
-        <CartItemsContainer>
+        <CartItemsWrapper>
             {
                 cartItems.length
-                    ? cartItems.map(cartItem => <CartItem key={ cartItem.id } item={ cartItem } />)
+                    ? (
+                        <CartItemsContainer>
+                            {
+                                cartItems.map(cartItem => 
+                                    <CartItem
+                                        key={ cartItem.id }
+                                        item={ cartItem }
+                                        handleClick={() => clearItem(cartItem) }
+                                    />
+                                )
+                            }
+                        </CartItemsContainer>
+                    )
                     : <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
-            }
-        </CartItemsContainer>
+                }
+        </CartItemsWrapper>
 
         { /* Checkout button */ }
         <CartDropdownButton
@@ -47,8 +60,12 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => (
     </CartDropdownContainer>
 );
 
+const mapDispatchToProps = dispatch => ({
+    clearItem: cartItem => dispatch(clearItemFromCart(cartItem)),
+});
+
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
 });
 
-export default withRouter(connect(mapStateToProps)(CartDropdown));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));

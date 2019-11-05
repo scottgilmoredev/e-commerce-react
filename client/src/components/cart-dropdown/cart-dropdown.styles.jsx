@@ -20,10 +20,13 @@ export const CartDropdownContainer = styled.div`
 `;
 
 export const CartItemsContainer = styled.div`
+  overflow: scroll;
+`;
+
+export const CartItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 240px;
-  overflow: scroll;
+  height: 220px;
 `;
 
 export const EmptyMessageContainer = styled.span`
@@ -35,4 +38,5 @@ export const EmptyMessageContainer = styled.span`
 CartDropdownButton.displayName = 'CartDropdownButton';
 CartDropdownContainer.displayName = 'CartDropdownContainer';
 CartItemsContainer.displayName = 'CartItemsContainer';
+CartItemsWrapper.displayName = 'CartItemsWrapper';
 EmptyMessageContainer.displayName = 'EmptyMessageContainer';

@@ -5,15 +5,21 @@ import {
     CartItemContainer,
     CartItemImage,
     ItemDetailsContainer,
+    RemoveButtonContainer,
 } from  './cart-item.styles';
 
-const CartItem = ({ item: { imageUrl, name, price, quantity } }) => (
+const CartItem = ({ handleClick, item: { imageUrl, name, price, quantity } }) => (
     <CartItemContainer>
         <CartItemImage src={imageUrl} alt='item' />
         <ItemDetailsContainer>
             <span>{ name }</span>
             <span>{ quantity } x ${ price }</span>
         </ItemDetailsContainer>
+
+        { /* Remove item button */ }
+        <RemoveButtonContainer onClick={ handleClick }>
+            &#10005;
+        </RemoveButtonContainer>
     </CartItemContainer>
 );
 
