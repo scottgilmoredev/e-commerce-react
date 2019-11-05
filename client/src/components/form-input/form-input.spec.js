@@ -28,7 +28,7 @@ describe('FormInput componet', () => {
     // Handle change.
     it('should call the handleChange method when input changes', () => {
         wrapper.find('FormInputContainer').simulate('change');
-        expect(mockHandleChange).toHaveBeenCalledWith();
+        expect(mockHandleChange).toHaveBeenCalled();
     });
 
     // Display form input label.
