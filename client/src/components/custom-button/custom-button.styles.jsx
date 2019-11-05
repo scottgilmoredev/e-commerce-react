@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { githubSignInStart } from '../../redux/user/user.actions';
 
 const buttonStyles = css`
     border: none;
@@ -24,6 +25,17 @@ const invertedButtonStyles = css`
     }
 `;
 
+const githubSignInStyles = css`
+    background-color: black;
+    color: white;
+
+    &:hover {
+        background-color: #f5f5f5;
+        border: none;
+        color: black;
+    }
+`;
+
 const googleSignInStyles = css`
     background-color: #4285f4;
     color: white;
@@ -37,6 +49,10 @@ const googleSignInStyles = css`
 const getButtonStyles = props => {
     if (props.isGoogleSignIn) {
         return googleSignInStyles;
+    }
+
+    if (props.isGithubSignIn) {
+        return githubSignInStyles;
     }
 
     return props.inverted ? invertedButtonStyles : buttonStyles;

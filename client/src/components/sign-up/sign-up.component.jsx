@@ -74,6 +74,7 @@ const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
                 { /* Sign up with GitHub */ }
                 <CustomButton
                     type='button'
+                    isGithubSignIn
                     onClick={ githubSignInStart }
                 >
                     Sign Up with GitHub
