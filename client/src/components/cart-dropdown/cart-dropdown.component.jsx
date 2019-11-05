@@ -25,7 +25,7 @@ import {
  * Display the cart drop-down menu.
  * The drop-down menu displays a list of cart items and the 'Go to Checkout' button
  */
-export const CartDropdown = ({ cartItems, clearItem, history, dispatch }) => (
+export const CartDropdown = ({ cartItems, clearItem, history, toggleCart }) => (
     <CartDropdownContainer>
         { /* Cart items */ }
         <CartItemsWrapper>
@@ -52,7 +52,7 @@ export const CartDropdown = ({ cartItems, clearItem, history, dispatch }) => (
         <CartDropdownButton
             onClick={() => {
                 history.push('/checkout');
-                dispatch(toggleCartHidden());
+                toggleCart();
             }}
         >
             GO TO CHECKOUT
@@ -62,6 +62,7 @@ export const CartDropdown = ({ cartItems, clearItem, history, dispatch }) => (
 
 const mapDispatchToProps = dispatch => ({
     clearItem: cartItem => dispatch(clearItemFromCart(cartItem)),
+    toggleCart: () => dispatch(toggleCartHidden())
 });
 
 const mapStateToProps = createStructuredSelector({
