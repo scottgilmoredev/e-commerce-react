@@ -76,6 +76,7 @@ export const CustomButtonContainer = styled.button`
     justify-content: center;
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
+    outline: none;
     text-transform: uppercase;
     width: 100%;
 
