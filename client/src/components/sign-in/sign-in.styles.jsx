@@ -1,6 +1,13 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const linkStyle = css`
+    color: #0366d6;
+    cursor: pointer;
+`;
+
+const getLinkStyle = () => linkStyle;
+
 const separator = css`
     border-bottom: 1px solid black;
     content: "";
@@ -10,8 +17,16 @@ const separator = css`
 `;
 
 export const LinkText = styled(Link)`
-    color: #0366d6;
-    cursor: pointer;
+    ${getLinkStyle};
+`;
+
+export const ForgotPasswordContainer = styled.a`
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    margin-top: -10px;
+
+    ${getLinkStyle};
 `;
 
 export const SeparatorContainer = styled.div`
@@ -52,6 +67,7 @@ export const SignUpContainer = styled.div`
 `;
 
 // Display names
+ForgotPasswordContainer.displayName = 'ForgotPasswordContainer';
 LinkText.displayName = 'LinkText';
 SignInContainer.displayName ='SignInContainer';
 SignInTitle.displayName ='SignInTitle';

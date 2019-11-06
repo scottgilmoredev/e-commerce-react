@@ -11,6 +11,7 @@ import { emailSignInStart, githubSignInStart, googleSignInStart } from '../../re
 
 // Styles
 import {
+    ForgotPasswordContainer,
     LinkText,
     SeparatorContainer,
     SignInContainer,
@@ -21,7 +22,7 @@ import {
 /**
  * Display the sign-in form.
  */
-const SignIn = ({ emailSignInStart, githubSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, githubSignInStart, googleSignInStart, handleClick }) => {
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
     const { email, password } = userCredentials;
 
@@ -92,6 +93,11 @@ const SignIn = ({ emailSignInStart, githubSignInStart, googleSignInStart }) => {
                     required
                     handleChange={ handleChange }
                 />
+
+                { /* Forgot password */ }
+                <ForgotPasswordContainer onClick={event => handleClick(event, email) }>
+                    Forgot your password?
+                </ForgotPasswordContainer>
 
                 { /* Submit: Sign In */ }
                 <CustomButton type='submit'>Continue</CustomButton>
