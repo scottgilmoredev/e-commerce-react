@@ -34,6 +34,13 @@ const githubSignInStyles = css`
         border: none;
         color: black;
     }
+
+    @media screen and (max-width: 800px) {
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
 `;
 
 const googleSignInStyles = css`
