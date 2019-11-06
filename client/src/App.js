@@ -20,8 +20,8 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import { GlobalStyle } from './global.styles';
 
 // Lazy Loaded Components
-const CheckoutPage = lazy(() => import ('./pages/checkout/checkout.component.jsx'));
-const ContactPage = lazy(() => import ('./pages/contact/contact.component.jsx'));
+const CheckoutPage = lazy(() => import ('./pages/checkout/checkout.component'));
+const ContactPage = lazy(() => import ('./pages/contact/contact.component'));
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUp = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
