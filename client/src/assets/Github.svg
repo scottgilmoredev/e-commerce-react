@@ -4,7 +4,7 @@
 <svg version="1.1" id="Github" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
 <g>
-	<rect id="github-back" fill="#3F91CB" width="128" height="128"/>
+	<rect id="github-back" fill="#262626" width="128" height="128"/>
 	<g id="github-github">
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M64,29.0449c-19.791,0-35.8398,16.0454-35.8398,35.8399
 			c0,15.8349,10.2695,29.2695,24.5097,34.0088c1.791,0.331,2.4492-0.7784,2.4492-1.7247c0-0.8544-0.0332-3.6777-0.0488-6.6728
