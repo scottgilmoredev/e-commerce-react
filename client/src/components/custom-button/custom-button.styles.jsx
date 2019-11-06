@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { githubSignInStart } from '../../redux/user/user.actions';
 
 const buttonStyles = css`
     border: none;
