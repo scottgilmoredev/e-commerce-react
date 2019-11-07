@@ -17,6 +17,7 @@ export const ForgotPasswordFormContainer = styled.div`
 
 export const ForgotPasswordHeader = styled.h2`
   margin: 10px 0;
+  text-align: center;
 `;
 
 export const ForgotPasswordSubHeader = styled.p`
