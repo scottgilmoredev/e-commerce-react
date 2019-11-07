@@ -32,6 +32,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 cartItems: removeItemFromCart(state.cartItems, action.payload)
             };
 
+        case CartActionTypes.SET_CART_FROM_FIREBASE:
+            return {
+                ...state,
+                cartItems: action.payload,
+            };
+
         case CartActionTypes.TOGGLE_CART_HIDDEN:
             return {
                 ...state,
