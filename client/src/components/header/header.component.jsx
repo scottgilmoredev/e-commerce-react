@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 // Assets
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 // Components
 import CartDropDown from '../cart-dropdown/cart-dropdown.component';

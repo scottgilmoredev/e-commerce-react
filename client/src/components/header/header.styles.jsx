@@ -25,6 +25,11 @@ export const LogoContainer = styled(Link)`
         padding: 0;
         width: 50px;
     }
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
 `;
 
 export const NavContainer = styled.div`
