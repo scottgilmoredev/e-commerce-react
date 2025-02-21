@@ -85,7 +85,7 @@ const App = ({ checkUserSession, currentUser }) => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
