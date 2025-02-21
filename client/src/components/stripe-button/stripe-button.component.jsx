@@ -31,7 +31,7 @@ const StripeCheckoutButton = ({ price }) => {
             amount={ priceForStripe }
             billingAddress
             description={ `Your total is $${ price }` }
-            image='https://svgshare.com/i/CUz.svg'
+            image='/logo.svg'
             label='Pay Now'
             name={ `Harry's Hoods Ltd.` }
             panelLabel='Pay Now'
