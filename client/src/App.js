@@ -97,7 +97,7 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 
-  // Uncomment the line below to add more collections redcords to firestore.
+  // Uncomment the line below to add more collections records to firestore.
   // collections: selectCollectionsForPreview,
 });
 
