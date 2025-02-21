@@ -29,6 +29,9 @@
     "styled-components": "^5.3.3"
   },
   "resolutions": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "cheerio": "0.22.0"
   },
   "devDependencies": {
