@@ -16,6 +16,7 @@ import {
     GitHubIcon,
     IconContainer,
     LinkedInIcon,
+    StyledLink,
 } from './contact.styles';
 
 export const ContactPage = () => (
@@ -24,14 +25,14 @@ export const ContactPage = () => (
 
         { /* Avatar */ }
         <AvatarContainer>
-            <Avatar src={ avatar } alt='profile image' />
+            <Avatar src={ avatar } alt='Cartoon superhero rendering of Scott C. Gilmore' />
         </AvatarContainer>
 
         <ContactText>Software Engineer</ContactText>
 
         <ContactHeading>Scott C. Gilmore</ContactHeading>
 
-        <a href="mailto:scott.crawford.gilmore@gmail.com">scott.crawford.gilmore@gmail.com</a>
+        <a href="mailto:scott@scottgilmore.dev">scott@scottgilmore.dev</a>
 
         { /* Social icons */ }
         <IconContainer>
@@ -41,9 +42,9 @@ export const ContactPage = () => (
             </a>
 
             { /* Github */ }
-            <a href='https://github.com/awesomescott'>
+            {/* <a href='https://github.com/scottgilmoredev'>
                 <GitHubIcon />
-            </a>
+            </a> */}
         </IconContainer>
 
         <ContactDivider />
@@ -51,10 +52,13 @@ export const ContactPage = () => (
         <ContactSubtextContainer>
             <ContactSubHeading>Like what you see?</ContactSubHeading>
             <ContactText>
-                {
-                    `This app was built to teach myself React. I hope you'll slide on over to my ` +
-                    `GitHub to view some of my other projects. If you like what I do, please get in touch.`
-                }
+                This app was built to teach myself React. Head over to my
+                {' '}
+                <StyledLink href="https://scottgilmore.dev" target="_blank" rel="noopener noreferrer">
+                    personal site
+                </StyledLink>
+                {' '}
+                to learn more about me. If you like what I do, please get in touch.
             </ContactText>
         </ContactSubtextContainer>
     </ContactPageContainer>
