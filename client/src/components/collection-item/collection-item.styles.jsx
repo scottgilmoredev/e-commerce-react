@@ -41,9 +41,10 @@ export const AddButton = styled(CustomButton)`
   position: absolute;
   top: 255px;
   width: 80%;
+  height: 40px;
 
   @media screen and (max-width: 800px) {
-    display: block;
+    display: flex;
     opacity: 0.9;
     min-width: unset;
     padding: 0 10px;
