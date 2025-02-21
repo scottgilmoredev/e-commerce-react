@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        background-color: #ECE6C2;
         font-family: 'Open Sans Condensed';
         margin-bottom: 40px;
         min-width: 320px;
