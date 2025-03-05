@@ -43,7 +43,7 @@ const SignUp = ({ githubSignInStart, googleSignInStart, signUpStart }) => {
     };
 
     /**
-     * Create new user on form sumbit.
+     * Create new user on form submit.
      * @param {Object} event - synthetic event.
      */
     const handleSubmit = async event => {
