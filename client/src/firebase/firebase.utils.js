@@ -8,7 +8,7 @@ const config = {
     authDomain: "harrys-hoods-db.firebaseapp.com",
     databaseURL: "https://harrys-hoods-db.firebaseio.com",
     projectId: "harrys-hoods-db",
-    storageBucket: "",
+    storageBucket: "harrys-hoods-db.firebasestorage.app",
     messagingSenderId: "728782853789",
     appId: "1:728782853789:web:39ea1081a0e502a9536674",
     measurementId: "G-W7KPNN5L2J"
