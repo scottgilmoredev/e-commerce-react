@@ -13,7 +13,7 @@ import {
     ContactSubHeading,
     ContactSubtextContainer,
     ContactText,
-    GitHubIcon,
+    // GitHubIcon,
     IconContainer,
     LinkedInIcon,
     StyledLink,
