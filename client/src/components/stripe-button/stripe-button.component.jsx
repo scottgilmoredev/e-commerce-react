@@ -7,8 +7,8 @@ import { clearCart } from '../../redux/cart/cart.actions';
 
 const StripeCheckoutButton = ({ clearCart, price }) => {
     const priceForStripe = price * 100;
-    const publishableKey = 'pk_test_SmMcunW9gjRfMJyVq2414gSg00ArMVpueO';
-
+    const publishableKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
+    
     const onToken = token => {
         axios({
             data: {
