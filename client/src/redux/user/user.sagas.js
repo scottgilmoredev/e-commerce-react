@@ -99,7 +99,7 @@ export function* onGoogleSignInStart() {
 export function* recoverPassword({ payload: email }) {
     try {
         const actionCodeSettings = {
-            url: 'https://harrys-hoods.herokuapp.com/signin',
+            url: 'https://harrys-hoods.netlify.app/signin',
             handleCodeInApp: true,
         };
 
