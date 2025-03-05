@@ -13,7 +13,7 @@ import Spinner from './components/spinner/spinner.component';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-// Uncomment the line below to add more collections redcords to firestore.
+// Uncomment the line below to add more collections records to firestore.
 // import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
 
 // Styles
