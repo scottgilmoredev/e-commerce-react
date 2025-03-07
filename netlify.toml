@@ -1,7 +1,12 @@
 [build]
-  command = "yarn build"
+  command = "./build.sh"
   publish = "build"
   functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18.14.2"
+  YARN_VERSION = "1.22.19"
+  YARN_FLAGS = "--ignore-engines --ignore-optional --ignore-scripts --ignore-platform"
 
 [dev]
   command = "yarn start"
