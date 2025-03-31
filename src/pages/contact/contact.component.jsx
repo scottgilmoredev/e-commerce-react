@@ -13,7 +13,7 @@ import {
     ContactSubHeading,
     ContactSubtextContainer,
     ContactText,
-    // GitHubIcon,
+    GitHubIcon,
     IconContainer,
     LinkedInIcon,
     StyledLink,
@@ -42,9 +42,9 @@ export const ContactPage = () => (
             </a>
 
             { /* Github */ }
-            {/* <a href='https://github.com/scottgilmoredev'>
+            <a href='https://github.com/scottgilmoredev'>
                 <GitHubIcon />
-            </a> */}
+            </a>
         </IconContainer>
 
         <ContactDivider />

@@ -7,7 +7,7 @@ const Footer = () => (
     <FooterContainer>
         <p>
             Feel free to view the source code on
-            <LinkText href='https://github.com/awesomescott/harrys-hoods'>&nbsp;GitHub.</LinkText>
+            <LinkText href='https://github.com/scottgilmoredev/e-commerce-react'>&nbsp;GitHub.</LinkText>
         </p>
     </FooterContainer>
 );
